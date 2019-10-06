@@ -22,6 +22,9 @@ namespace RecordMenuHook {
         [DllImport("kernel32.dll")]
         public static extern uint GetCurrentThreadId();
 
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hwnd, uint wMsg, IntPtr wParam, IntPtr lParam);
+
         [StructLayout(LayoutKind.Sequential)]
         public struct MSG {
             public IntPtr hwnd;
