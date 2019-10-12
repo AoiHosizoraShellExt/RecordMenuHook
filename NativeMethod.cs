@@ -53,5 +53,14 @@ namespace RecordMenuHook {
                 return new POINT(p.X, p.Y);
             }
         }
+
+        [StructLayout(LayoutKind.Sequential)]
+        public class KBDLLHOOKSTRUCT {
+            public uint vkCode;
+            public uint scanCode;
+            public NativeEnum.KBDLLHOOKSTRUCTFlags flags;
+            public uint time;
+            public UIntPtr dwExtraInfo;
+        }
     }
 }

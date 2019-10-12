@@ -25,6 +25,14 @@ namespace RecordMenuHook {
             WH_MOUSE_LL = 14
         }
 
+        [Flags]
+        public enum KBDLLHOOKSTRUCTFlags : uint {
+            LLKHF_EXTENDED = 0x01,
+            LLKHF_INJECTED = 0x10,
+            LLKHF_ALTDOWN = 0x20,
+            LLKHF_UP = 0x80,
+        }
+
         public enum WindowsMessages : uint {
             WM_NULL = 0x0000,
             WM_CREATE = 0x0001,
